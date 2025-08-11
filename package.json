@@ -1,0 +1,19 @@
+{
+  "name": "curd-node",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cord": "^1.0.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.3"
+  }
+}
