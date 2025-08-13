@@ -10,12 +10,17 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json())
-app.use(cors());
+app.use(cors({
+    origin: 'https://curd-node-react.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 /*connectedToMongoDB().then(() => {
     app.listen(PORT, () => {
         console.log(`server is running on http://localhost:${PORT}`)
     });
 });*/
+
 app.use('/api/user', userRoutes)
 
 app.listen(PORT, () => {
